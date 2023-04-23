@@ -1,0 +1,151 @@
+plugins {
+    id 'com.android.application'
+  
+    id 'com.google.gms.google-services'
+
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
+}
+
+android {
+    namespace 'com.shivangi.eVQUICK'
+    compileSdk 33
+
+
+
+    defaultConfig {
+        applicationId "com.shivangi.eVQUICK"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        /*ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        python {
+            version "3.8"
+        }*/
+
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_16
+            targetCompatibility JavaVersion.VERSION_16
+        }
+        buildFeatures {
+
+            viewBinding true
+            dataBinding true
+        }
+    }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+        implementation 'com.google.android.material:material:1.8.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+        implementation platform('com.google.firebase:firebase-bom:31.5.0')
+        implementation 'com.google.firebase:firebase-database:20.2.0'
+        implementation 'com.google.firebase:firebase-auth:21.3.0'
+        implementation 'com.google.firebase:firebase-analytics'
+        implementation 'com.google.android.gms:play-services-maps:18.1.0'
+        implementation 'com.google.android.gms:play-services-location:21.0.1'
+        implementation 'com.google.android.libraries.places:places:3.1.0'
+        //implementation 'com.androidx.support:support-vector-drawable:28.0.0'
+
+        //implementation 'com.github.mancj:MaterialSearchBar:0.8.1'
+
+        implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+
+        implementation 'com.google.maps:google-maps-services:0.9.3'
+        implementation 'org.slf4j:slf4j-simple:1.7.25'
+
+        implementation 'org.jsoup:jsoup:1.11.3'
+        //implementation 'com.androidx.support:coordinatorlayout:28.0.0'
+
+        // For animation
+        implementation 'com.airbnb.android:lottie:4.1.0'
+
+        // For Animation
+        implementation 'com.github.aarsy.googlemapsanimations:googlemapsanimations:1.0.5'
+
+        // For Firestore
+        implementation 'com.google.firebase:firebase-firestore:24.5.0'
+        implementation 'com.google.firebase:firebase-core:21.1.1'
+        implementation 'com.firebaseui:firebase-ui-database:3.2.2'
+
+        //implementation 'com.androidx.support:multidex:1.0.3'
+
+        testImplementation 'junit:junit:4.13.2'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+        implementation 'com.lorentzos.swipecards:library:1.0.9'
+        implementation 'androidx.cardview:cardview:1.0.0'
+        implementation 'com.github.bumptech.glide:glide:4.11.0'
+        //implementation 'com.github.tintinscorpion:Dual-color-Polyline-Animation:1.0'
+        implementation 'com.ncorti:slidetoact:0.7.0'
+        implementation 'com.google.android.material:material:1.8.0'
+        implementation 'com.firebase:geofire-android:3.0.0'
+        implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+
+        implementation 'com.karumi:dexter:5.0.0'
+        implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+        implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+
+        // Navigation Component
+        implementation "androidx.navigation:navigation-fragment"
+        implementation 'android.arch.navigation:navigation-ui:1.0.0'
+
+        // Circular ImageView library
+        implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+        // Glide Library
+        implementation 'com.github.bumptech.glide:glide:4.11.0'
+        annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+        // Image Cropper Library
+        api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+        // Shape library to draw curves
+        implementation 'com.github.florent37:shapeofview:1.4.7'
+
+        // Circular Indicator library
+        implementation 'com.victor:lib:1.0.4'
+        implementation 'androidx.appcompat:appcompat:1.6.1'
+        implementation 'com.google.android.material:material:1.8.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+        implementation 'androidx.navigation:navigation-fragment:2.5.3'
+        //implementation 'androidx.databinding:databinding-runtime:8.0.0'
+        //implementation 'androidx.databinding:library:3.2.0-alpha11'
+        implementation 'androidx.cardview:cardview:1.0.0'
+        //annotationProcessor 'com.android.databinding:compiler:3.1.4'
+
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}
+
+
+
+
+
+

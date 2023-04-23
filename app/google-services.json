@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "404115432515",
+    "project_id": "evquick-64542",
+    "storage_bucket": "evquick-64542.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404115432515:android:ba4b37a3608bb7969ae0f6",
+        "android_client_info": {
+          "package_name": "com.shivangi.eVQUICK"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404115432515-eitp761g8mi2r1cm4sdtou18k8mdmb3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shivangi.eVQUICK",
+            "certificate_hash": "5097b9f042eb78ba650beb09fef4769157f6c292"
+          }
+        },
+        {
+          "client_id": "404115432515-i3h810a1sgjfmbjvep1eohbq752kaeh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8cCowf-N4gVArlKZ-SWJxfbdd6LX907g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404115432515-i3h810a1sgjfmbjvep1eohbq752kaeh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

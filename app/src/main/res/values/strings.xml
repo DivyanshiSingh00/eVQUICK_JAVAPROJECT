@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">eVQUICK</string>
+    <string name="title_activity_cstation_maps">CStationMapsActivity</string>
+    <string name="title_activity_user_maps">UserMapsActivity</string>
+    <string name="title_activity_user_login">UserLoginActivity</string>
+    <string name="title_activity_admin_login">AdminLoginActivity</string>
+
+    <string name="title_activity_user_current_location">UserCurrentLocationActivity</string>
+
+
+    <string name="title_activity_maps">Map</string>
+
+    <string name="open_navigation_drawer">Open Drawer</string>
+    <string name="close_navigation_drawer">Open Drawer</string>
+
+
+    <string name="GOOGLE_MAPS_API_KEY">AIzaSyDhgKUB5Ee5f-Dbq1E6QVbf9RIF8m9d7_g</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Charging Station</string>
+    <string name="nav_header_subtitle">Never Travel Much For Fuel</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_map">Map</string>
+    <string name="menu_location">Station Locations</string>
+    <string name="menu_price">Fuel Price</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_search">Search</string>
+
+    <string name="total_slots">Total Slots: </string>
+    <string name="available_slots">Available Slots: </string>
+
+
+    <!--    Styling    -->
+    <string name="styled_map_demo_label">Styled Map</string>
+    <string name="style_label_retro">Retro</string>
+    <string name="style_label_night">Night</string>
+    <string name="style_label_grayscale">Grayscale</string>
+    <string name="style_label_no_pois_no_transit">No POIs or transit</string>
+    <string name="style_label_default">Default</string>
+    <string name="style_choose">Choose style</string>
+    <string name="style_set_to">Style set to: %1$s</string>
+    <string name="title_activity_user_current_location_map">UserCurrentLocationMapActivity</string>
+    <string name="title_activity_alternative">alternative</string>
+    <string name="default_info_title" />
+    <string name="default_info_snippet" />
+    <string name="pick_place" />
+    <string name="com_shivangi_evquick_savedplacemodel_address_default_address">{com.shivangi.eVQUICK.SavedPlaceModel.address,default=Address}</string>
+
+
+</resources>
