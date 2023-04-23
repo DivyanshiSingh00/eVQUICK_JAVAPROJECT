@@ -2,17 +2,19 @@ package com.shivangi.eVQUICK.Activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -33,11 +35,14 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.firebase.auth.FirebaseAuth;
 import com.shivangi.eVQUICK.R;
 import com.shivangi.eVQUICK.databinding.ActivityMapsBinding;
+import com.shivangi.eVQUICK.databinding.BottomSheetLayoutBinding;
 
 @SuppressWarnings("ALL")
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,  GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,  GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private GoogleMap mMap;
 
@@ -46,13 +51,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private FusedLocationProviderClient fusedLocationProviderClient;
 
+    private FirebaseAuth mAuth;
+
     private static final int Request_code = 101;
+
+    private BottomSheetBehavior<RelativeLayout> bottomSheetBehavior;
+    private BottomSheetLayoutBinding bottomSheetLayoutBinding;
 
     private double lat, lng;
 
-    int intLayout =2;
 
-    ImageButton atm, hosp, rest, chargeStation;
+
+    ImageButton atm, hosp, rest, chargeStation, btnLogout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +72,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         atm = findViewById(R.id.atms);
         hosp= findViewById(R.id.hospitals);
         rest= findViewById(R.id.restaurants);
         chargeStation = findViewById(R.id.charging_stations);
+        btnLogout= findViewById(R.id.Logoutbtn);
 
 
         fusedLocationProviderClient=
@@ -74,6 +89,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //FirebaseAuth.getInstance().signOut();
+                if (v.getId() == R.id.Logoutbtn) {
+                    mAuth.getInstance().signOut();
+                    Intent intent = new Intent(MapsActivity.this, UserLoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+
 
         atm.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -27,10 +27,15 @@ public class UserLoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
 
+    int intLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
+
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         mAuth = FirebaseAuth.getInstance();
         firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -90,6 +95,16 @@ public class UserLoginActivity extends AppCompatActivity {
         });
     }
 
+
+    public void goToHomePage(View v){
+        intLayout =2;
+        setContentView(R.layout.activity_main);
+    }
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(UserLoginActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
     @Override
     protected void onStart() {
         super.onStart();

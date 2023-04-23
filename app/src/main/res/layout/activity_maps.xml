@@ -7,7 +7,11 @@
     android:orientation="vertical"
 
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Activity.MapsActivity">
+    tools:context=".Activity.MapsActivity"
+    >
+
+
+
 
 
     <LinearLayout
@@ -16,6 +20,9 @@
         android:id="@+id/linearLayout"
         android:orientation="horizontal"
         android:padding= "10dp">
+
+
+
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -46,6 +53,20 @@
             android:padding="30dp"
             android:src="@drawable/baseline_local_atm_24"
             />
+
+        <ImageButton
+            android:id="@+id/Logoutbtn"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:backgroundTint="@color/white"
+            android:src="@drawable/ic_logout"
+
+            app:fabCustomSize="50dp" />
     </LinearLayout>
 
 
