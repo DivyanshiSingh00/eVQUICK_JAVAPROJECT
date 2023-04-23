@@ -4,6 +4,12 @@ eVQUICK is an android app development project that aims to provide the users wit
 #### Tools Used
 #### Contributors
 ## Tools Used
+###### ANDROID STUDIO 
+###### JAVA
+###### GRADLE
+###### GITHUB
+###### GOOGLE FIREBASE
+###### GOOGLE APIs
 ## Contributors
 This project is a team effort by a group of 3 students from Bennett University. The team members are:
 #### Shivangi Tripathi - [Github](https://github.com/ShiviTripathi13) | [Linkedin](https://www.linkedin.com/in/shivangi-tripathi-bu/)
